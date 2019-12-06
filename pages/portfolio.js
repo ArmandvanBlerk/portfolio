@@ -30,6 +30,8 @@ class Portfolio extends React.Component {
           <h1> {portfolio.title} </h1>
           <p> BODY: {portfolio.body} </p>
           <p> ID:  {portfolio.id} </p>
+
+          
         </BasePage>
       </BaseLayout>
     )

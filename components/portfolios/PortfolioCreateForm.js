@@ -5,6 +5,7 @@ import PortInput from '../form/PortInput';
 import PortDate from '../form/PortDate';
 
 import moment from 'moment';
+import portfolioNew from '../../pages/portfolioNew';
 
 const validateInputs = (values) => {
   let errors = {};
@@ -54,7 +55,10 @@ const PortfolioCreateForm = ({initialValues, onSubmit, error}) => (
                  name="description"
                  label="Description"
                  component={PortInput}/>
-
+                 {/* these inputs should be for source code and live url,, these are the inpput fields but should be display as buttons on cards
+                 that links to those URL's -----NOTE----
+                 text of the two inputs are not dislplaying on website*/}
+          
           <Field name="startDate"
                  label="Start Date"
                  initialDate={initialValues.startDate}

@@ -13,7 +13,7 @@ import moment from 'moment';
 
 const INITIAL_VALUES = { title: '',
                          company: '',
-                         location: '',
+                         stack: '',
                          position: '',
                          description: '',
                          startDate: moment(),

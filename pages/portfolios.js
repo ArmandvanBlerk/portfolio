@@ -69,7 +69,7 @@ class Portfolios extends React.Component {
     const { isAuthenticated, isSiteOwner } = this.props.auth;
 
     return (
-      <BaseLayout title="Filip Jerga - Learn About My Experience" {...this.props.auth}>
+      <BaseLayout title="Armand van Blerk - Learn About My Experience" {...this.props.auth}>
         <BasePage className="portfolio-page" title="Portfolios">
         { isAuthenticated && isSiteOwner &&
           <Button onClick={() => Router.pushRoute('/portfolios/new')}
@@ -80,6 +80,8 @@ class Portfolios extends React.Component {
           <Row>
             { this.renderPortfolios(portfolios) }
           </Row>
+
+         
         </BasePage>
       </BaseLayout>
     )

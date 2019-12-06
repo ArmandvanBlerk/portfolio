@@ -34,9 +34,11 @@ export default class PortfolioCard extends React.Component {
             <p className="portfolio-card-city">{portfolio.location}</p>
             <CardTitle className="portfolio-card-title">{portfolio.title}</CardTitle>
             <CardText className="portfolio-card-text">{portfolio.description}</CardText>
+            
             <div className="readMore">
               {children}
             </div>
+            
           </CardBody>
         </Card>
       </span>

@@ -1,22 +1,40 @@
 import React from 'react';
 import Header from '../shared/Header';
 import Head from 'next/head';
+import ReactGA from 'react-ga';
 
 const BaseLayout = (props) => {
   const { className, children, isAuthenticated, user, isSiteOwner, cannonical } = props;
   const headerType = props.headerType || 'default';
-  const title = props.title || 'Filip Jerga Portfolio';
+  const title = props.title || 'Armand van Blerk Portfolio';
+
+  function initializeReactGA() {
+    ReactGA.initialize('UA-154165321-1');
+    ReactGA.pageview('/index', '/about', '/portfolios', '/cv', '/blog');
+}
+
   return (
     <React.Fragment>
       <Head>
+      {/* GOOGLE TRACKING SCRIPT */}
+      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154165321-1"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-154165321-1');
+          </script> */}
+
         <title>{title}</title>
-        <meta name="description" content="My name is Filip Jerga and I am an experienced software engineer and freelance developer. I have a Master's degree in Artificial Intelligence and several years of experience working on a wide range of technologies and projects from C++ development for ultrasound devices to modern mobile and web applications in React and Angular. Throughout my career, I have acquired advanced technical knowledge and the ability to explain programming topics clearly and in detail to a broad audience. I invite you to take my course, where I have put a lot of effort to explain web and software engineering concepts in a detailed, hands-on and understandable way." />
-        <meta name="keywords" content="jerga portfolio, jerga developer, jerga freelancig, jerga programming"/>
-        <meta property="og:title" content="Filip Jerga - programmer, developer, bloger" />
+        <meta name="description" content="My name is Armand van Blerk and I am a Full stack Developer whom specializes in the MERN stack." />
+        <meta name="keywords" content="armand portfolio, armand developer, armand freelancing, armand programming"/>
+        <meta property="og:title" content="Armand van Blerk - programmer, developer, bloger" />
         <meta property="og:locale" content="en_EU" />
         <meta property="og:url" content={`${process.env.BASE_URL}`}/>
         <meta property="og:type" content="website"/>
-        <meta property="og:description" content="My name is Filip Jerga and I am an experienced software engineer and freelance developer."/>
+        <meta property="og:description" content="My name is Armand van Blerk and I am an experienced software engineer and freelance developer."/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
         {cannonical && <link rel="cannonical" href={`${process.env.BASE_URL}${cannonical}`}/>}
         <link rel="icon" type="image/ico" href="/static/favicon.ico"/>
