@@ -50,6 +50,6 @@
     "slugify": "^1.3.3"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   }
 }
